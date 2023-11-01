@@ -16,7 +16,11 @@ class InputEmbeddings(nn.Module):
         # Page 5: Multiply the weights by sqrt(dimensions)
         return self.embedding(x) * math.sqrt(self.dimensions)
 
+"""
+Positional Encoding. Added to input embedding.
+"""
 class PositionalEncoding(nn.Module):
+    # We need sequence_length which is the amount of tokens in the input.
     def __init__(self, dimensions: int, sequence_length: int, dropout: float):
         super().__init__()
         self.dimensions = dimensions  # d_model in the paper
@@ -26,7 +30,9 @@ class PositionalEncoding(nn.Module):
         # Create a matrix of shape (sequence_length, dimensions)
         positional_encoding = torch.zeros(sequence_length, dimensions)
         # Create a vector/tensor of shape (sequence_length, 1)
+        # arange = 1D tensor (vector)
         positions = torch.arange(0, length, dtype=torch.float).unsqueeze(1)
+
         denominator = torch.exp(torch.arange(0, dimensions, 2).float() * (-math.log(10000.0) / dimensions))
 
         # Apply the sin to even positions
