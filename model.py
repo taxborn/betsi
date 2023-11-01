@@ -48,3 +48,18 @@ class PositionalEncoding(nn.Module):
         # This will mean it is not a learned tensor
         x = x + (self.positional_encoding[:, :x.shape[1], :]).requires_grad_(False)
         return self.dropout(x)
+
+"""
+Layer Normalization
+"""
+class LayerNormalization(nn.Module):
+    def __init__(self, eps: float = 10**-6):
+        super().__init__()
+        self.eps = eps
+        self.alpha = nn.Parameter(torch.ones(1))
+        self.bias = nn.Parameter(torch.zeroes(1))
+
+    def forward(self, x):
+        mean = x.mean(dim = -1, keepdim=True)
+        std = x.std(dim = -1, keepdim=True)
+        return self.alpha * (x - mean) / (std + self.eps) + self.bias

@@ -1,5 +1,7 @@
 # Lite Observation
 [arXiv paper](https://arxiv.org/abs/1706.03762)
+
+## Transformer model architecture
 ![Transformer model](./resources/transformer-model.png)
 
 A light implementation of the 2017 Google paper 'Attention is all you need'.

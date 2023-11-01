@@ -36,3 +36,13 @@ however just adding these values to the vector would reveal a bias for informati
 as `p` grows larger. The paper provides these equations:
 
 ![Positional encoding equations](./resources/positional-encoding-2.png)
+
+## Layer normalization
+Layer normalization is exactly how it sounds, given that the values can grow very large given a large vocabulary 
+for the dataset, it's easier to normalize the values to a max that we know.
+
+Say we are given the sentence **How are you**, it would be transformed into 3 vectors of dimension 512 after 
+input embedding and positional encoding. For each of these vectors, we want to compute the average and standard 
+deviation of the 'layer', and change the output based upon this equation:
+
+![Normalization equations](./resources/normalization.png)
