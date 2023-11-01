@@ -1,3 +1,12 @@
+# Why not RNNs?
+One main limitation of recurrent neural networks is that it has a limited memory, and can only recall a finite
+amount of tokens (sometimes referred to as time steps). Transformer models theoretically have an infinite amount 
+of memory/recall.
+
+RNNs are also slow for long sequences.
+
+**TODO** Fill out more.
+
 # Input embedding
 ![Input embedding example](./resources/input-embedding.png)
 This is discussed in section 3.4 in the arXiv paper. Input embeddings is a way to represent our input sentence in 
@@ -37,7 +46,7 @@ as `p` grows larger. The paper provides these equations:
 
 ![Positional encoding equations](./resources/positional-encoding-2.png)
 
-## Layer normalization
+# Layer normalization
 Layer normalization is exactly how it sounds, given that the values can grow very large given a large vocabulary 
 for the dataset, it's easier to normalize the values to a max that we know.
 

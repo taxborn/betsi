@@ -21,6 +21,7 @@ Positional Encoding. Added to input embedding.
 """
 class PositionalEncoding(nn.Module):
     # We need sequence_length which is the amount of tokens in the input.
+    # Dropout will help us with overfitting
     def __init__(self, dimensions: int, sequence_length: int, dropout: float):
         super().__init__()
         self.dimensions = dimensions  # d_model in the paper
@@ -35,9 +36,9 @@ class PositionalEncoding(nn.Module):
 
         denominator = torch.exp(torch.arange(0, dimensions, 2).float() * (-math.log(10000.0) / dimensions))
 
-        # Apply the sin to even positions
+        # Apply the `sin` to even positions
         positional_encoding[:,0::2] = torch.sin(positions * denominator)
-        # Apply the cos to odd positions
+        # Apply the `cos` to odd positions
         positional_encoding[:,1::2] = torch.cos(positions * denominator)
 
         # We are now at size (1, sequence_length, dimensions)
@@ -55,7 +56,7 @@ Layer Normalization
 class LayerNormalization(nn.Module):
     def __init__(self, eps: float = 10**-6):
         super().__init__()
-        self.eps = eps
+        self.eps = eps  # epsilon
         self.alpha = nn.Parameter(torch.ones(1))
         self.bias = nn.Parameter(torch.zeroes(1))
 

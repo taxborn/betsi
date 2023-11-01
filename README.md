@@ -39,3 +39,9 @@ and AMD card, I hope to use that to get GPU training by the end of the block.
 - [ ] Training loop
 - [ ] Visualization of the model
 - [ ] Install AMD RocM to train with GPU
+
+## References used
+- [Dropout information](https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/)
+- [Input embedding and positional encoding video](https://www.youtube.com/watch?v=3mTsYm9qQFA)
+- [arXiv paper](https://arxiv.org/abs/1706.03762)
+- [Transformer model overview](https://www.youtube.com/watch?v=4Bdc55j80l8)
