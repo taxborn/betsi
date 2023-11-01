@@ -23,22 +23,22 @@ I'm creating notes as I go, which can be found in [NOTES.md](./NOTES.md).
 Since I have an AMD card, I am going to use CPU training. However since AMD RocM will allow for using CUDA on
 and AMD card, I hope to use that to get GPU training by the end of the block.
 
-## TODO:
+## TODO and tenative timeline:
 - [X] Input Embeddings
 - [X] Positional Encoding
-- [X] Layer Normalization
+- [X] Layer Normalization **- Due by 11/1**
 - [ ] Feed forward
 - [ ] Multi-Head attention
 - [ ] Residual Connection
 - [ ] Encoder
-- [ ] Decoder
+- [ ] Decoder **- Due by 11/8**
 - [ ] Linear Layer
 - [ ] Transformer
-- [ ] Tokenizer
+- [ ] Tokenizer **- Due by 11/15**
 - [ ] Dataset
 - [ ] Training loop
-- [ ] Visualization of the model
-- [ ] Install AMD RocM to train with GPU
+- [ ] Visualization of the model **- Due by 11/22**
+- [ ] Install AMD RocM to train with GPU **- Attempt to do by end**
 
 ## References used
 - [Dropout information](https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/)
