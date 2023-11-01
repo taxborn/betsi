@@ -26,7 +26,7 @@ and AMD card, I hope to use that to get GPU training by the end of the block.
 ## TODO:
 - [X] Input Embeddings
 - [X] Positional Encoding
-- [ ] Layer Normalization
+- [X] Layer Normalization
 - [ ] Feed forward
 - [ ] Multi-Head attention
 - [ ] Residual Connection
