@@ -1,9 +1,6 @@
 # Lite Observation
 [arXiv paper](https://arxiv.org/abs/1706.03762)
 
-## Transformer model architecture
-![Transformer model](./resources/transformer-model.png)
-
 A light implementation of the 2017 Google paper 'Attention is all you need'.
 
 For this implementation I will implement a translation from English to Spanish, as Tranformer models are exceptional at language 
@@ -15,6 +12,10 @@ The book content of these translations are free for personal, educational, and r
 
 ## Notes
 I'm creating notes as I go, which can be found in [NOTES.md](./NOTES.md).
+
+## Transformer model architecture
+![Transformer model](./resources/transformer-model.png)
+
 
 ## Requirements
 - PyTorch
