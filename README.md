@@ -9,6 +9,13 @@ The dataset I will be using is the [opus books](https://opus.nlpl.eu/Books.php) 
 The book content of these translations are free for personal, educational, and research use. 
 [OPUS language resource paper](http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf).
 
+## Notes
+I'm creating notes as I go, which can be found in [NOTES.md](./NOTES.md).
+
+## Requirements
+- PyTorch
+> `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu`
+
 ## TODO:
 - [ ] Input Embeddings
 - [ ] Positional Encoding
@@ -21,8 +28,6 @@ The book content of these translations are free for personal, educational, and r
 - [ ] Linear Layer
 - [ ] Transformer
 - [ ] Tokenizer
-- [ ] Dataset ()
+- [ ] Dataset
 - [ ] Training loop
 - [ ] Visualization of the model
-
-## 
