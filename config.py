@@ -33,7 +33,8 @@ def get_config():
         "preload": "latest",  # None or 'latest'
         # Tokenizer file, this is where the tokenizer will be saved
         "tokenizer_file": "tokenizer_{0}.json",
-        "experiment_name": "runs/tmodel"
+        "experiment_name": "runs/tmodel",
+        "validation_each_step": False
     }
 
 def get_weights_file_path(config, epoch: str):
@@ -59,12 +60,14 @@ def latest_weights_file_path(config):
     :param config: the configuration dictionary
     :return: the path to the latest weights file
     """
-    # model_folder = f"{config['datasource']}_{config['model_folder']}"
-    # model_filename = f"{config['model_basename']}*"
-    # weights_files = list(Path(model_folder).glob(model_filename))
+    model_folder = f"{config['datasource']}_{config['model_folder']}"
+    model_filename = f"{config['model_basename']}*"
+    #weights_files = list(Path(model_folder).glob(model_filename))
+    weights_files = list(Path(model_folder).glob("tmodel_32*.pt"))
     # Get betsi.py from the weights folder
-    weights_files = list(Path("weights").glob('*.pt'))
-    print(f"weights_files: {weights_files}")
+    #weights_files = list(Path("weights").glob('*.pt'))
+    #weights_files = list(Path("weights").glob('tmodel_32*.pt'))
+    #print(f"weights_files: {weights_files}")
 
     # If there are no weights files, return None
     if len(weights_files) == 0:

@@ -2,11 +2,9 @@ from model import build_transformer
 from dataset import BilingualDataset, causal_mask
 from config import get_config, get_weights_file_path, latest_weights_file_path
 
-import torchtext.datasets as datasets
 import torch
 import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader, random_split
-from torch.optim.lr_scheduler import LambdaLR
+from torch.utils.data import DataLoader, random_split
 
 import warnings
 from tqdm import tqdm
@@ -172,7 +170,7 @@ def get_model(config, vocab_src_len, vocab_tgt_len):
 
 def train_model(config):
     # Define the device
-    device =  "cpu"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
     print("Using device:", device)
     if (device == 'cuda'):
         print(f"Device name: {torch.cuda.get_device_name(device.index)}")
@@ -240,10 +238,10 @@ def train_model(config):
             optimizer.step()
             optimizer.zero_grad(set_to_none=True)
 
-            # Run validation at the end of every epoch
             # run_validation(model, val_dataloader, tokenizer_src, tokenizer_tgt, config['seq_len'], device, lambda msg: batch_iterator.write(msg), global_step, writer)
 
-            run_validation(model, val_dataloader, tokenizer_src, tokenizer_tgt, config['seq_len'], device, lambda msg: batch_iterator.write(msg), global_step, writer)
+            if config['validation_each_step']:
+                run_validation(model, val_dataloader, tokenizer_src, tokenizer_tgt, config['seq_len'], device, lambda msg: batch_iterator.write(msg), global_step, writer)
             global_step += 1
 
         # Run validation at the end of every epoch
