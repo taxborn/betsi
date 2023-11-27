@@ -63,11 +63,11 @@ def latest_weights_file_path(config):
     model_folder = f"{config['datasource']}_{config['model_folder']}"
     model_filename = f"{config['model_basename']}*"
     #weights_files = list(Path(model_folder).glob(model_filename))
-    weights_files = list(Path(model_folder).glob("tmodel_39*.pt"))
+    #weights_files = list(Path(model_folder).glob("tmodel_39*.pt"))
     # Get betsi.py from the weights folder
     #weights_files = list(Path("weights").glob('*.pt'))
-    #weights_files = list(Path("weights").glob('tmodel_32*.pt'))
-    #print(f"weights_files: {weights_files}")
+    weights_files = list(Path("weights").glob('betsi*'))
+    print(f"weights_files: {weights_files}")
 
     # If there are no weights files, return None
     if len(weights_files) == 0:
