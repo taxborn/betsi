@@ -5,8 +5,6 @@ of memory/recall.
 
 RNNs are also slow for long sequences.
 
-**TODO** Fill out more.
-
 # Input embedding
 ![Input embedding example](./resources/input-embedding.png)
 This is discussed in section 3.4 in the arXiv paper. Input embeddings is a way to represent our input sentence in 

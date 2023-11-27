@@ -1,13 +1,19 @@
+"""
+This script translates a sentence from the source language to the target language.
+"""
+import sys
 from pathlib import Path
-from config import get_config, latest_weights_file_path 
-from model import build_transformer
 from tokenizers import Tokenizer
 from datasets import load_dataset
-from dataset import BilingualDataset
 import torch
-import sys
+from config import get_config, latest_weights_file_path
+from model import build_transformer
+from dataset import BilingualDataset
 
 def translate(sentence: str):
+    """
+    Translates a sentence from the source language to the target language.
+    """
     # Define the device, tokenizers, and model
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Using device:", device)
@@ -33,6 +39,8 @@ def translate(sentence: str):
 
     # translate the sentence
     model.eval()
+
+    # disable gradient calculation, we don't need it for inference
     with torch.no_grad():
         # Precompute the encoder output and reuse it for every generation step
         source = tokenizer_src.encode(sentence)
@@ -74,6 +82,3 @@ def translate(sentence: str):
 
     # convert ids to tokens
     return tokenizer_tgt.decode(decoder_input[0].tolist())
-    
-#read sentence from argument
-translate(sys.argv[1] if len(sys.argv) > 1 else "I am not a very good a student.")
