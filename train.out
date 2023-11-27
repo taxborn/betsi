@@ -204,3 +204,84 @@ Processing Epoch 19: 100%|██████████████████
     TARGET: Dar’ja Aleksandrovna invece sapeva che da sé non si fa neanche la farinata per la colazione dei bambini e che, perciò, per un’organizzazione così complessa e perfetta, doveva essere stata impiegata la cura intensa di qualcuno. E dallo sguardo di Aleksej Kirillovic, da come egli esaminò la tavola e fece un cenno col capo al maggiordomo, da come offrì a Dar’ja Aleksandrovna la scelta tra la botvin’ja e la soupe, ella capì che tutto era stato disposto e diretto dalle cure dello stesso padrone di casa.
  PREDICTED: Dar ’ ja Aleksandrovna , però , non guardò neanche una torta intelligente , e lo a colazione , e perciò era così vasta che una maggior attività , e questa era indispensabile . Ma per lui , dall ’ attenzione , e , dopo aver domandato al padrone , si diresse la testa verso il padrone di lei e la camicia che aveva chiesto di fare , e aveva chiesto di portare con tutto il pesce , e di mangiare .
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+...
+
+
+Using device: cuda
+Device name: AMD Radeon RX 7900 XT
+Device memory: 19.984375 GB
+Max length of source sentence: 309
+Max length of target sentence: 274
+Preloading model opus_books_weights/tmodel_32.pt
+Processing Epoch 33: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:19<00:00,  4.55it/s, loss=1.693]
+--------------------------------------------------------------------------------
+    SOURCE: Your relations with him could not have gone beyond what was proper, else I should have spoken to him myself!
+    TARGET: I tuoi rapporti non potevano andare oltre quel che si conviene; io stessa l’avrei richiamato.
+ PREDICTED: I tuoi rapporti non potevano andare oltre quel che si conviene ; io stessa l ’ avrei richiamato .
+--------------------------------------------------------------------------------
+    SOURCE: "Wicked and cruel boy!" I said. "You are like a murderer--you are like a slave-driver--you are like the Roman emperors!"
+    TARGET: — Perfido e crudele ragazzo! — dissi, — siete simile a un assassino, a un guardiano di schiavi, a un imperatore romano!
+ PREDICTED: — e crudele ragazzo ! — dissi , — siete simile a un assassino , a un guardiano di schiavi , a un imperatore romano !
+--------------------------------------------------------------------------------
+Processing Epoch 34: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:20<00:00,  4.55it/s, loss=1.634]
+--------------------------------------------------------------------------------
+    SOURCE: The hard red bricks have only grown more firmly set with time, and their oak stairs do not creak and grunt when you try to go down them quietly.
+    TARGET: I duri mattoni rossi non si son che consolidati col tempo, e le loro scale di quercia non scricchiolano e non brontolano quando si cerca di discenderne pian piano.
+ PREDICTED: I duri mattoni rossi non si son che col tempo , e le loro scale di quercia non scricchiolano e si quando si cerca di pian piano .
+--------------------------------------------------------------------------------
+    SOURCE: Dropping his head on his hands he sat thus for a long time, tried several times to speak, but stopped short.
+    TARGET: Chinata la testa fra le mani, rimase a lungo in questa posizione, più di una volta provò a parlare e si fermò.
+ PREDICTED: la testa sulle mani , rimase per un pezzo a lungo tempo , varie volte , ma si fermò in silenzio .
+--------------------------------------------------------------------------------
+Processing Epoch 35:  31%|██████████████████████████████████████████▋                                                                                              | 1134/3638 [04:07<09:04,Processing Epoch 35:  31%|██████████████████████████████████████████▋                                                                                              | 1134/3638 [04:07<09:04,Processing Epoch 35:  31%|██████████████████████████████████████████▋                                                                                              | 1135/3638 [04:07<09:09,Processing Epoch 35:  31%|██████████████████████████████████████████▋                                                                                              | 1135/3638 [04:07<09:09,Processing Epoch 35:  31%|██████████████████████████████████████████▊                                                                                              | 1136/3638 [04:07<09:05,Processing Epoch 35:  31%|██████████████████████████████████████████▊                                                                                              | 1136/3638 [04:08<09:05,Processing Epoch 35:  31%|██████████████████████████████████████████▊                                                                                              | 1137/3638 [04:08<09:04,Processing Epoch 35:  31%|██████████████████████████████████████████▊                                                                                              | 1137/3638 [04:08<09:04,Processing Epoch 35:  31%|██████████████████████████████████████████▊                                                                                              | 1138/3638 [04:08<09:04,Processing Epoch 35:  31%|██████████████████████████████████████████▊                                                                                              | 1138/3638 [04:08<09:04,Processing Epoch 35:  31%|██████████████████████████████████████████▉                                                                                              | 1139/3638 [04:08<09:09,Processing Epoch 35:  31%|██████████████████████████████████████████▉                                                                                              | 1139/3638 [04:08<09:09,Processing Epoch 35:  31%|██████████████████████████████████████████▉                                                                                              | 1140/3638 [04:08<09:05,Processing Epoch 35:  31%|██████████████████████████████████████████▉                                                                                              | 1140/3638 [04:09<09:05,Processing Epoch 35:  31%|██████████████████████████████████████████▉                                                                                              | 1141/3638 [04:09<09:04,Processing Epoch 35:  31%|██████████████████████████████████████████▉                                                                                              | 1141/3638 [04:09<09:04,Processing Epoch 35:  31%|███████████████████████████████████████████                                                                                              | 1142/3638 [04:09<09:04,Processing Epoch 35:  31%|███████████████████████████████████████████                                                                                              | 1142/3638 [04:09<09:04,Processing Epoch 35:  31%|███████████████████████████████████████████                                                                                              | 1143/3638 [04:09<09:03,  4.59it/s, losProcessing Epoch 35: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:11<00:00,  4.59it/s, loss=1.757]
+--------------------------------------------------------------------------------
+    SOURCE: It is the way of the world.
+    TARGET: Il mondo è fatto così.
+ PREDICTED: È il mondo così .
+--------------------------------------------------------------------------------
+    SOURCE: 'Adopted! How?'
+    TARGET: — Come adottato?
+ PREDICTED: — Come adottato ?
+--------------------------------------------------------------------------------
+Processing Epoch 36: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:11<00:00,  4.60it/s, loss=1.710]
+--------------------------------------------------------------------------------
+    SOURCE: And it was likewise his fault that she was for ever parted from her son.
+    TARGET: E, di nuovo, era anche lui colpevole ch’ella fosse divisa per sempre dal figlio.
+ PREDICTED: E , pure , era il suo difetto , per lei non era mai stato mai più .
+--------------------------------------------------------------------------------
+    SOURCE: What a hot and strong grasp he had! and how like quarried marble was his pale, firm, massive front at this moment!
+    TARGET: Oh! come la sua stretta mi parve ardente e forte. E la sua fronte pallida e impassibile pareva un pezzo di marmo in quel momento.
+ PREDICTED: Le sue vesti erano e non sapeva come se ; le sue lunghe mani erano fredde e i grandi !
+--------------------------------------------------------------------------------
+Processing Epoch 37: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:10<00:00,  4.60it/s, loss=1.648]
+--------------------------------------------------------------------------------
+    SOURCE: You don't - well, I will just give you an idea of Harris's comic singing, and then you can judge of it for yourself.
+    TARGET: Non vi aspettate... Bene, vi darò appunto un’idea delle canzonette allegre di Harris, e potrete giudicare da voi.
+ PREDICTED: Non vi aspettate ... Bene , vi darò un ’ idea delle canzonette allegre di Harris , e allora potrete .
+--------------------------------------------------------------------------------
+    SOURCE: 'That generally takes some time,' interrupted the Gryphon.
+    TARGET: — E generalmente così facendo si perde del tempo, — interruppe il Grifone.
+ PREDICTED: — E generalmente così facendo si perde del tempo , — interruppe il Grifone .
+--------------------------------------------------------------------------------
+Processing Epoch 38: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:20<00:00,  4.55it/s, loss=1.809]
+--------------------------------------------------------------------------------
+    SOURCE: "Not I. The utmost I hope is, to save money enough out of my earnings to set up a school some day in a little house rented by myself."
+    TARGET: — Nessuna; tutto ciò che spero si è di guadagnare abbastanza per potere un giorno aprire una scuola in una casetta affittata da me.
+ PREDICTED: — Non ho fatto nulla ; spero che a dare grande la via da me a qualche giorno in una casetta ben fatta a casa .
+--------------------------------------------------------------------------------
+    SOURCE: I felt an inward power; a sense of influence, which supported me.
+    TARGET: La crisi era pericolosa, ma non era priva di fascino.
+ PREDICTED: La crisi era pericolosa , ma non era priva di fascino .
+--------------------------------------------------------------------------------
+Processing Epoch 39: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:32<00:00,  4.47it/s, loss=1.658]
+--------------------------------------------------------------------------------
+    SOURCE: 'Oh, about Buzulukov there is such a tale – splendid!' shouted Petritsky. 'You know his passion for balls?
+    TARGET: — Ah, con Buzulukov c’è stata una storia, una delizia! — gridò Petrickij. — Dunque, la passione sua sono i balli, e non se ne perde nemmeno uno di quelli a corte.
+ PREDICTED: — Su , su , e di loro si sta il vero , ottimo umore — gridò Petrickij . — Tu sai la passione per le palle .
+--------------------------------------------------------------------------------
+    SOURCE: 'Well, what shall we do...?
+    TARGET: — E come andremo?
+ PREDICTED: — E allora ?
+--------------------------------------------------------------------------------
+

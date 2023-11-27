@@ -1,35 +1,43 @@
-from model import build_transformer
-from dataset import BilingualDataset, causal_mask
-from config import get_config, get_weights_file_path, latest_weights_file_path
-
+"""
+This file contains the code to train the model.
+"""
+import warnings
+from pathlib import Path
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, random_split
-
-import warnings
-from tqdm import tqdm
-import os
-from pathlib import Path
+from torch.utils.tensorboard import SummaryWriter
+import torchmetrics
 
 # Huggingface datasets and tokenizers
-from datasets import load_dataset
+from tqdm import tqdm
 from tokenizers import Tokenizer
 from tokenizers.models import WordLevel
 from tokenizers.trainers import WordLevelTrainer
 from tokenizers.pre_tokenizers import Whitespace
+from datasets import load_dataset
 
-import torchmetrics
-from torch.utils.tensorboard import SummaryWriter
+from model import build_transformer
+from dataset import BilingualDataset, causal_mask
+from config import get_config, get_weights_file_path, latest_weights_file_path
+
 
 def greedy_decode(model, source, source_mask, tokenizer_src, tokenizer_tgt, max_len, device):
+    """
+    Greedy decoding algorithm. This is used to generate the output of the model for a given input.
+    """
+    # Get the indicies of the sos and eos tokens
     sos_idx = tokenizer_tgt.token_to_id('[SOS]')
     eos_idx = tokenizer_tgt.token_to_id('[EOS]')
 
     # Precompute the encoder output and reuse it for every step
     encoder_output = model.encode(source, source_mask)
+
     # Initialize the decoder input with the sos token
     decoder_input = torch.empty(1, 1).fill_(sos_idx).type_as(source).to(device)
+
     while True:
+        # Break if the decoder input is too long
         if decoder_input.size(1) == max_len:
             break
 
@@ -41,18 +49,25 @@ def greedy_decode(model, source, source_mask, tokenizer_src, tokenizer_tgt, max_
 
         # get next token
         prob = model.project(out[:, -1])
+        # Use torch.max to get the index of the largest probability, which is the next word and hence why 
+        # we call this greedy decoding
         _, next_word = torch.max(prob, dim=1)
+        # Add the next word to the decoder input
         decoder_input = torch.cat(
             [decoder_input, torch.empty(1, 1).type_as(source).fill_(next_word.item()).to(device)], dim=1
         )
 
+        # Break if the next word is the eos token
         if next_word == eos_idx:
             break
 
+    # Return the decoder input without the sos token
     return decoder_input.squeeze(0)
 
-
 def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, device, print_msg, global_step, writer, num_examples=2):
+    """
+    Runs the validation dataset through the model and prints out the source, target and model output.
+    """
     model.eval()
     count = 0
 
@@ -62,6 +77,7 @@ def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, 
 
     console_width = 80
 
+    # Do not compute gradients, since we are not training the model here, only evaluating it
     with torch.no_grad():
         for batch in validation_ds:
             count += 1
@@ -81,7 +97,7 @@ def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, 
             source_texts.append(source_text)
             expected.append(target_text)
             predicted.append(model_out_text)
-            
+
             # Print the source, target and model output
             print_msg('-'*console_width)
             print_msg(f"{f'SOURCE: ':>12}{source_text}")
@@ -91,7 +107,7 @@ def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, 
             if count == num_examples:
                 print_msg('-'*console_width)
                 break
-    
+
     if writer:
         # Evaluate the character error rate
         # Compute the char error rate 
@@ -113,10 +129,17 @@ def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, 
         writer.flush()
 
 def get_all_sentences(ds, lang):
+    """
+    Generator that yields all the sentences in the dataset for the given language.
+    """
     for item in ds:
         yield item['translation'][lang]
 
 def get_or_build_tokenizer(config, ds, lang):
+    """
+    Returns the tokenizer for the given language. If the tokenizer does not exist, 
+    it will be built and saved.
+    """
     tokenizer_path = Path(config['tokenizer_file'].format(lang))
     if not Path.exists(tokenizer_path):
         # Most code taken from: https://huggingface.co/docs/tokenizers/quicktour

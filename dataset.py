@@ -96,7 +96,7 @@ class BilingualDataset(Dataset):
             "src_text": src_text,
             "tgt_text": tgt_text,
         }
-    
+
 def causal_mask(size):
     """
     The causal mask is used to prevent the decoder from looking into the future.
@@ -104,6 +104,9 @@ def causal_mask(size):
     are 0 except for the upper triangular part. The upper triangular part is filled
     with -inf. This is because the softmax function will convert the -inf to 0, and
     the softmax function is applied to the words before calculating the cross entropy.
+
+    :param size: the size of the mask
+    :return: the causal mask
     """
     mask = torch.triu(torch.ones((1, size, size)), diagonal=1).type(torch.int)
 

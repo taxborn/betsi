@@ -54,6 +54,7 @@ class FeedForwardBlock(nn.Module):
     def forward(self, x):
         """
         Forward pass of the feed forward block. 
+        :param x: the input tensor of shape (batch, seq_len, d_model)
         """
         # (batch, seq_len, d_model) --> (batch, seq_len, d_ff) --> (batch, seq_len, d_model)
         return self.linear_2(self.dropout(torch.relu(self.linear_1(x))))
@@ -71,6 +72,7 @@ class InputEmbeddings(nn.Module):
     def forward(self, x):
         """
         Forward pass of the input embeddings.
+        :param x: the input tensor of shape (batch, seq_len)
         """
         # (batch, seq_len) --> (batch, seq_len, d_model)
         # Multiply by sqrt(d_model) to scale the embeddings according to the paper
@@ -107,6 +109,7 @@ class PositionalEncoding(nn.Module):
     def forward(self, x):
         """
         Forward pass of the positional encoding. 
+        :param x: the input tensor of shape (batch, seq_len, d_model)
         """
         x = x + (self.pe[:, :x.shape[1], :]).requires_grad_(False) # (batch, seq_len, d_model)
 
@@ -123,7 +126,8 @@ class ResidualConnection(nn.Module):
 
     def forward(self, x, sublayer):
         """
-        Forward pass of the residual connection. 
+        Forward pass of the residual connection.
+        :param x: the input tensor of shape (batch, seq_len, d_model)
         """
         return x + self.dropout(sublayer(self.norm(x)))
 
@@ -152,6 +156,14 @@ class MultiHeadAttentionBlock(nn.Module):
         """
         Calculates the attention between the query and key vectors. The attention scores are used to
         calculate the weighted sum of the value vectors. 
+
+        :param query: the query vector of shape (batch, h, seq_len, d_k)
+        :param key: the key vector of shape (batch, h, seq_len, d_k)
+        :param value: the value vector of shape (batch, h, seq_len, d_k)
+        :param mask: the mask to apply to the attention scores
+        :param dropout: the dropout layer to apply to the attention scores
+
+        :return: the weighted sum of the value vectors and the attention scores, and the attention scores themselves
         """
         d_k = query.shape[-1]
         # Just apply the formula from the paper
@@ -175,6 +187,13 @@ class MultiHeadAttentionBlock(nn.Module):
     def forward(self, q, k, v, mask):
         """
         Forward pass of the multi-head attention block. 
+
+        :param q: the query vector of shape (batch, seq_len, d_model)
+        :param k: the key vector of shape (batch, seq_len, d_model)
+        :param v: the value vector of shape (batch, seq_len, d_model)
+        :param mask: the mask to apply to the attention scores
+
+        :return: the output of the multi-head attention block
         """
         query = self.w_q(q) # (batch, seq_len, d_model) --> (batch, seq_len, d_model)
         key = self.w_k(k) # (batch, seq_len, d_model) --> (batch, seq_len, d_model)
@@ -193,7 +212,7 @@ class MultiHeadAttentionBlock(nn.Module):
         x = x.transpose(1, 2).contiguous().view(x.shape[0], -1, self.h * self.d_k)
 
         # Multiply by Wo
-        # (batch, seq_len, d_model) --> (batch, seq_len, d_model) 
+        # (batch, seq_len, d_model) --> (batch, seq_len, d_model)
         return self.w_o(x)
 
 class EncoderBlock(nn.Module):
@@ -211,6 +230,9 @@ class EncoderBlock(nn.Module):
     def forward(self, x, src_mask):
         """
         The forward pass of the encoder block.
+
+        :param x: the input tensor of shape (batch, seq_len, d_model)
+        :param src_mask: the mask to apply to the attention scores
         """
         x = self.residual_connections[0](x, lambda x: self.self_attention_block(x, x, x, src_mask))
         x = self.residual_connections[1](x, self.feed_forward_block)
@@ -229,9 +251,13 @@ class Encoder(nn.Module):
     def forward(self, x, mask):
         """
         Forward pass of the encoder.
+
+        :param x: the input tensor of shape (batch, seq_len, d_model)
+        :param mask: the mask to apply to the attention scores
         """
         for layer in self.layers:
             x = layer(x, mask)
+        # Normalize the output
         return self.norm(x)
 
 class DecoderBlock(nn.Module):
@@ -249,6 +275,11 @@ class DecoderBlock(nn.Module):
     def forward(self, x, encoder_output, src_mask, tgt_mask):
         """
         The forward pass of the decoder block. 
+
+        :param x: the input tensor of shape (batch, seq_len, d_model)
+        :param encoder_output: the output of the encoder of shape (batch, seq_len, d_model)
+        :param src_mask: the mask to apply to the attention scores
+        :param tgt_mask: the mask to apply to the attention scores
         """
         x = self.residual_connections[0](x, lambda x: self.self_attention_block(x, x, x, tgt_mask))
         x = self.residual_connections[1](x, lambda x: self.cross_attention_block(x, encoder_output, encoder_output, src_mask))
@@ -268,6 +299,11 @@ class Decoder(nn.Module):
     def forward(self, x, encoder_output, src_mask, tgt_mask):
         """
         Forward pass of the decoder. 
+
+        :param x: the input tensor of shape (batch, seq_len, d_model)
+        :param encoder_output: the output of the encoder of shape (batch, seq_len, d_model)
+        :param src_mask: the mask to apply to the attention scores
+        :param tgt_mask: the mask to apply to the attention scores
         """
         for layer in self.layers:
             x = layer(x, encoder_output, src_mask, tgt_mask)
@@ -281,9 +317,11 @@ class ProjectionLayer(nn.Module):
         super().__init__()
         self.proj = nn.Linear(d_model, vocab_size)
 
-    def forward(self, x) -> None:
+    def forward(self, x):
         """
         A forward pass of the projection layer. Only need to apply a linear layer.
+
+        :param x: the input tensor of shape (batch, seq_len, d_model)
         """
         # (batch, seq_len, d_model) --> (batch, seq_len, vocab_size)
         return self.proj(x)
@@ -307,6 +345,11 @@ class Transformer(nn.Module):
     def encode(self, src, src_mask):
         """
         Encode the source sentence.
+
+        :param src: the source sentence of shape (batch, seq_len)
+        :param src_mask: the mask to apply to the attention scores
+
+        :return: the output of the encoder
         """
         # (batch, seq_len, d_model)
         src = self.src_embed(src)
@@ -316,6 +359,13 @@ class Transformer(nn.Module):
     def decode(self, encoder_output: torch.Tensor, src_mask: torch.Tensor, tgt: torch.Tensor, tgt_mask: torch.Tensor):
         """
         Decode the transformer output.
+
+        :param encoder_output: the output of the encoder of shape (batch, seq_len, d_model)
+        :param src_mask: the mask to apply to the attention scores
+        :param tgt: the target sentence of shape (batch, seq_len)
+        :param tgt_mask: the mask to apply to the attention scores
+
+        :return: the output of the decoder
         """
         # (batch, seq_len, d_model)
         tgt = self.tgt_embed(tgt)
@@ -325,6 +375,8 @@ class Transformer(nn.Module):
     def project(self, x):
         """
         Use the projection layer to project the output of the decoder to the vocabulary size.
+
+        :param x: the input tensor of shape (batch, seq_len, d_model)
         """
         # (batch, seq_len, vocab_size)
         return self.projection_layer(x)
@@ -332,6 +384,18 @@ class Transformer(nn.Module):
 def build_transformer(src_vocab_size: int, tgt_vocab_size: int, src_seq_len: int, tgt_seq_len: int, d_model: int=512, N: int=6, h: int=8, dropout: float=0.1, d_ff: int=2048) -> Transformer:
     """
     Build the transformer model based on the parameters. Most of the parameters are the same as the paper.
+
+    :param src_vocab_size: the size of the source vocabulary
+    :param tgt_vocab_size: the size of the target vocabulary
+    :param src_seq_len: the maximum length of the source sentence
+    :param tgt_seq_len: the maximum length of the target sentence
+    :param d_model: the dimension of the model, 512 is the default mentioned in the paper
+    :param N: the number of encoder and decoder blocks, 6 is the default mentioned in the paper
+    :param h: the number of heads, 8 is the default mentioned in the paper
+    :param dropout: the dropout rate, 0.1 is the default mentioned in the paper
+    :param d_ff: the dimension of the feed forward block, 2048 is the default mentioned in the paper
+
+    :return: the transformer model
     """
     # Create the embedding layers
     src_embed = InputEmbeddings(d_model, src_vocab_size)
