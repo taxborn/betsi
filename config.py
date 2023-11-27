@@ -20,11 +20,11 @@ def get_config():
         "seq_len": 350,
         # Dimension of the model, 512 is the default mentioned in the paper
         "d_model": 512,
-        "datasource": 'opus_books',
         # Source language of the dataset
         "lang_src": "en",
         # Target language of the dataset
         "lang_tgt": "it",
+        "datasource": 'opus_books',
         "model_basename": "tmodel_",
         "model_folder": "weights",
         # Whether to use the latest weights file in the weights folder
@@ -59,13 +59,16 @@ def latest_weights_file_path(config):
     :param config: the configuration dictionary
     :return: the path to the latest weights file
     """
-    model_folder = f"{config['datasource']}_{config['model_folder']}"
-    model_filename = f"{config['model_basename']}*"
-    weights_files = list(Path(model_folder).glob(model_filename))
+    # model_folder = f"{config['datasource']}_{config['model_folder']}"
+    # model_filename = f"{config['model_basename']}*"
+    # weights_files = list(Path(model_folder).glob(model_filename))
+    # Get betsi.py from the weights folder
+    weights_files = list(Path("weights").glob('*.pt'))
+    print(f"weights_files: {weights_files}")
 
+    # If there are no weights files, return None
     if len(weights_files) == 0:
         return None
 
-    weights_files.sort()
-
+    # Return the last weights file
     return str(weights_files[-1])

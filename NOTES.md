@@ -55,3 +55,17 @@ input embedding and positional encoding. For each of these vectors, we want to c
 deviation of the 'layer', and change the output based upon this equation:
 
 ![Normalization equations](./resources/normalization.png)
+
+# Feed Forward
+The feed forward mechanism in a transformer model is a crucial component that operates on the output of the attention mechanism. Each layer of the transformer contains a feed forward neural network, which is applied individually to each position separately and identically. This means the same feed forward network is applied to all positions, but independently for each position. 
+The purpose of this mechanism is to process and transform the output from the attention layers. It typically consists of two linear transformations with a nonlinear activation function in between, often ReLU (Rectified Linear Unit) or a variant. The feed forward network enables the transformer to integrate and process the information gathered through the self-attention mechanism, contributing to the model's ability to handle complex patterns in data such as language, sound, or images. This architecture allows transformers to be highly parallelizable and efficient in handling sequential data.
+
+# Multi-Head attention
+
+# Connection
+# Encoder
+# Decoder
+# Linear Layer
+# Transformer
+# Dataset / Tokenziation
+# Training

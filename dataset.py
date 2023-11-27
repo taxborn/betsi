@@ -8,25 +8,33 @@ class BilingualDataset(Dataset):
     """
     Dataset class for the training process. 
     """
-    def __init__(self, ds, tokenizer_src, tokenizer_tgt, src_lang, tgt_lang, seq_len):
+    def __init__(self, dataset, tokenizer_src, tokenizer_tgt, src_lang, tgt_lang, seq_len):
         super().__init__()
-        self.seq_len = seq_len
 
-        self.ds = ds
+        self.seq_len = seq_len
+        self.dataset = dataset
         self.tokenizer_src = tokenizer_src
         self.tokenizer_tgt = tokenizer_tgt
         self.src_lang = src_lang
         self.tgt_lang = tgt_lang
 
+        # The special tokens to be used in the dataset
+        # SOS: Start of sentence
         self.sos_token = torch.tensor([tokenizer_tgt.token_to_id("[SOS]")], dtype=torch.int64)
+        # EOS: End of sentence
         self.eos_token = torch.tensor([tokenizer_tgt.token_to_id("[EOS]")], dtype=torch.int64)
+        # PAD: Padding, used to make all the sentences the same size
         self.pad_token = torch.tensor([tokenizer_tgt.token_to_id("[PAD]")], dtype=torch.int64)
 
+    # The length of the dataset is the number of sentences in the dataset
     def __len__(self):
-        return len(self.ds)
+        return len(self.dataset)
 
+    # This function is called when the dataset is indexed with dataset[idx], 
+    # where idx is an integer. This function should return a dictionary containing
+    # the encoder input, decoder input, encoder mask, decoder mask, and label.
     def __getitem__(self, idx):
-        src_target_pair = self.ds[idx]
+        src_target_pair = self.dataset[idx]
         src_text = src_target_pair['translation'][self.src_lang]
         tgt_text = src_target_pair['translation'][self.tgt_lang]
 
@@ -90,5 +98,13 @@ class BilingualDataset(Dataset):
         }
     
 def causal_mask(size):
+    """
+    The causal mask is used to prevent the decoder from looking into the future.
+    This function returns a tensor of shape (1, size, size) where all the elements
+    are 0 except for the upper triangular part. The upper triangular part is filled
+    with -inf. This is because the softmax function will convert the -inf to 0, and
+    the softmax function is applied to the words before calculating the cross entropy.
+    """
     mask = torch.triu(torch.ones((1, size, size)), diagonal=1).type(torch.int)
+
     return mask == 0
