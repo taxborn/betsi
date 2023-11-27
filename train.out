@@ -1,0 +1,206 @@
+Using device: cuda
+Device name: AMD Radeon RX 7900 XT
+Device memory: 19.984375 GB
+Max length of source sentence: 309
+Max length of target sentence: 274
+No model to preload, starting from scratch
+Processing Epoch 00: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=5.540]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: He strayed down a walk edged with box, with apple trees, pear trees, and cherry trees on one side, and a border on the other full of all sorts of old-fashioned flowers, stocks, sweet-williams, primroses, pansies, mingled with southernwood, sweet-briar, and various fragrant herbs. They were fresh now as a succession of April showers and gleams, followed by a lovely spring morning, could make them: the sun was just entering the dappled east, and his light illumined the wreathed and dewy orchard trees and shone down the quiet walks under them.
+    TARGET: Egli camminava in un sentiero limitato da una siepe di bosso; da un lato si vedevano i peri, i meli e i ciliegi, dall'altro i garofani, il biancospino e le erbe odorifere; erano così belle ristorate dal sole e dalle frequenti pioggie; il sole faceva brillare la rugiada sulle foglie e mandava i suoi raggi nel sentiero solitario ove eravamo.
+ PREDICTED: Il signor Rochester , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , e , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , e , e , , , e , , e , , , , , , , e , e , , , , , , , , , , , , , , , , e , , , , , , , , , , , , ,
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Levin told him what he had heard from Katavasov of what was said in Petersburg, and, after some talk on politics, Levin recounted how he had made Metrov's acquaintance and had gone to the meeting.
+    TARGET: Levin raccontò ciò che aveva sentito da Katavasov e da Metrov su quello che si diceva a Pietroburgo, e, dopo aver parlato un po’ di politica, raccontò d’aver conosciuto Metrov e di essere andato alla seduta.
+ PREDICTED: Levin si Aleksandrovic , e si , e , e si a lui , e che si a lui , e si a lui , e di lui , e si , e di lui , e che si a lui .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 01: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=3.889]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Serpukhovskoy had long ago ceased to trouble himself about Vronsky's career, but was as fond of him as ever and was particularly amiable to him now.
+    TARGET: Serpuchovskoj aveva rinunciato già da tempo a far rientrare in servizio Vronskij, ma gli voleva bene come prima, e adesso era particolarmente gentile con lui.
+ PREDICTED: Aleksej Aleksandrovic , che la sua vita , e , non aveva mai mai mai mai mai mai mai mai mai mai più di nuovo , ma non aveva mai mai mai mai mai mai mai mai mai mai mai mai mai .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: "Where are you?" I exclaimed.
+    TARGET: — Dove siete? — domandai.
+ PREDICTED: — Che cosa siete ? — domandò .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 02: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.36it/s, loss=4.754]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'Into trouble, how?'
+    TARGET: — Come s’è reso colpevole?
+ PREDICTED: — E come mai ?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: "A strange wish, Mrs. Reed; why do you hate her so?"
+    TARGET: — Strano desiderio, signora Reed! Perché la odiate tanto?
+ PREDICTED: — È vero , signora Reed , — ella disse , — perché non vi mai ?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 03: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.36it/s, loss=4.586]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'No, no!' she began again. 'I am not afraid of him.
+    TARGET: — No, no — prese a dire — non ho paura di lui, ho paura della morte.
+ PREDICTED: — No , no — ella disse , — non posso dire .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: I employed myself in planting my second rows of stakes or piles, and in this wicker-working all the summer or dry season, when another business took me up more time than it could be imagined I could spare.
+    TARGET: Tutta la state o sia la stagione asciutta fu da me impiegata nell’innalzare il mio secondo steccato di pali, ed anche nel fabbricarmi canestri, quando una seconda operazione mi porto via più tempo di quanto si potesse immaginare ch’io ne avessi d’avanzo.
+ PREDICTED: Io il mio moschetto , e il mio lavoro , e il mio lavoro , che non mi di più di più di più , che mi di più di più .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 04: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.36it/s, loss=5.658]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: I wished I had kept my candle burning: the night was drearily dark; my spirits were depressed.
+    TARGET: Avrei desiderato un lume, perché la notte era scura e mi sentivo oppressa.
+ PREDICTED: Mi sentivo la candela e la luna era stata piena di notte , e la mia tristezza .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: But when it comes to getting business done, we do it better than anyone.
+    TARGET: Intanto, quando c’è da concludere un affare, siamo noi a far meglio.
+ PREDICTED: Ma quando ci , ci , non ci più .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 05: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.36it/s, loss=4.764]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'Will it be soon?
+    TARGET: — Sarà presto?
+ PREDICTED: — Volete aspettare ?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Her hand, toying with a leaf that she had pulled off, trembled.
+    TARGET: La mano che giocava con una foglia strappata, tremò.
+ PREDICTED: La sua mano , con un ’ occhiata con un ’ occhiata che ella aveva preso , si alzò e si mise a piangere .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 06: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.36it/s, loss=4.381]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'But why?
+    TARGET: — Ma perché poi?
+ PREDICTED: — Ma perché ?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: The afternoon came on wet and somewhat misty: as it waned into dusk, I began to feel that we were getting very far indeed from Gateshead: we ceased to pass through towns; the country changed; great grey hills heaved up round the horizon: as twilight deepened, we descended a valley, dark with wood, and long after night had overclouded the prospect, I heard a wild wind rushing amongst trees.
+    TARGET: Non traversavamo più città; il paesaggio era cambiato. Alte montagne bigie limitavano l'orizzonte, l'oscurità aumentava più c'inoltravamo nella valle.
+ PREDICTED: La sera dopo aver un poco , e la , e la che eravamo a Gateshead , che eravamo le case di Gateshead ; la città era distante di una pioggia di sole , che avevamo la notte , e la notte che avevamo la notte .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 07: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=3.963]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'Oh, still the same – with a loss,' replied the landowner as he stopped beside Levin, with a resigned smile and a look of calm conviction that it must be so. 'And how do you come to be in our Province?' he asked. 'Have you come to take part in our coup d'état?' he went on, pronouncing the French words firmly but badly. 'All Russia has assembled here: Chamberlains and almost Ministers.' He pointed to the portly figure of Oblonsky in his Chamberlain's uniform with white trousers, walking beside a General.
+    TARGET: — Sempre allo stesso modo, in perdita — rispose il proprietario fermandoglisi accanto con un sorriso rassegnato, ma con un’espressione di calma e di convinzione che la cosa così dovesse andare. — E voi come mai siete venuto nel nostro governatorato? — domandò. — Siete venuto per prendere parte al nostro coup d’état? — disse, pronunciando con fermezza, anche se male, le parole francesi. — Tutta la Russia vi è convenuta: i ciambellani e, per poco, anche i ministri. — Egli indicò la figura rappresentativa di Stepan Arkad’ic in pantaloni bianchi e divisa da ciambellano, che camminava con un generale.
+ PREDICTED: — Ah , è ancora una cosa — rispose il proprietario , entrando in fretta , e , senza aspettare il sorriso , si fermò con un sorriso . — E come va a prendere il maresciallo del governatorato ? — disse Stepan Arkad ’ ic , come si rivolse a Sergej Ivanovic con la questione delle carte dove si trova in francese . — E voi , con una folla che ha fatto il popolo , è una parte di campagna , , , e , , , , , il popolo , è vero , con la campagna , , e , , il campo , , , , , , , , , , il campo , il suo articolo a un ospite .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: _Dec_.
+    TARGET: Dall’11 al 16.
+ PREDICTED: .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 08: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=3.369]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'Yes, electric light,' said Levin. 'Yes, by the by, where is Vronsky now?' he asked, suddenly putting down the soap.
+    TARGET: — Già, la luce elettrica — disse Levin. — Già... e dov’è Vronskij adesso? — chiese dopo aver posato a un tratto il sapone.
+ PREDICTED: — Sì , una luce — disse Levin . — E dove ? — disse , dove è ? — Su , allora , andiamo .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: The ruler of the realm was seen.
+    TARGET: appariva il signore del regno.
+ PREDICTED: Tutto questo era possibile di nuovo .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 09: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=3.649]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'But do explain to me what it means!' said Oblonsky.
+    TARGET: — Ma spiegatemi, per favore — disse Stepan Arkad’ic — che cosa significa questo?
+ PREDICTED: — Ma per me ne parliamo di quello che è stato — disse Stepan Arkad ’ ic .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'Well, allow me to kiss your hand.'
+    TARGET: — Permettetemi di baciare la vostra piccola mano.
+ PREDICTED: — Be ’, mi permettete di prendere la mano .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 10: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=4.038]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: What she saw so distinctly in the mirror of Anna's face, she saw in him.
+    TARGET: Ciò che con tanta chiarezza appariva nello specchio del viso di Anna, Kitty vide anche in lui.
+ PREDICTED: Mentre si accorse così , in quel momento , Anna vide il viso di Anna .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Kitty knew what that unusual thing was, and watched her attentively.
+    TARGET: Kitty sapeva cos’era questo qualcosa di eccezionale, e la osservava attenta.
+ PREDICTED: Kitty sapeva che cosa era importante e guardava il suo sguardo con lei .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 11: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=2.936]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Don't you hear?
+    TARGET: Sentite?
+ PREDICTED: Non vi sentite così ?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: While following this interesting conversation Levin all the time continued to admire her: her beauty, her cleverness; her good education, together with her simplicity and sincerity.
+    TARGET: Seguendo la conversazione interessante, Levin tutto il tempo ammirava lei e la sua bellezza e intelligenza e la cultura e insieme la semplicità e la cordialità.
+ PREDICTED: Mentre in questo conversazione , Levin continuò a tutta la sua bellezza ; la sua bellezza era fatta da lei , con una certa semplicità e .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 12: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=2.523]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'Well, and what is your theory?' asked Katavasov with a smile, evidently challenging Levin to a discussion. 'Why have private individuals no right?'
+    TARGET: — Ebbene, qual’è la vostra teoria? — disse con un sorriso Katavasov a Levin, evidentemente per sfidarlo a una discussione. — Perché i privati non ne hanno il diritto?
+ PREDICTED: — Be ’, e che cosa c ’ è la vostra opinione ? — disse con un sorriso , evidentemente , evidentemente , un sorriso di canzonatura sul quale non ha nulla di comune ?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: The poor creature, who had at a distance, indeed, seen me kill the savage, his enemy, but did not know, nor could imagine how it was done, was sensibly surprised, trembled, and shook, and looked so amazed that I thought he would have sunk down.
+    TARGET: Quel povero selvaggio che dianzi m’avea veduto, veramente in distanza, uccidere il selvaggio suo nemico, ma non seppe o non potè immaginare come ciò fosse avvenuto, or rimase immerso in una più penosa sorpresa. Tremava, era convulso, mandava occhiate sì smarrite che credei vederlo svenire.
+ PREDICTED: Il povero selvaggio , che da vero , come un altro , avea veduto , mi accorsi che il suo nemico fosse stato buono , nè nè nè nè nè via il bene che avesse la via ; onde mi parve tosto la sua mano , che gli pareva un gran terribile fragore .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 13: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.36it/s, loss=3.147]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Her heart was beating violently and she could not fix her thoughts on anything.
+    TARGET: Il cuore le batteva forte e il pensiero non riusciva a fermarsi su nulla.
+ PREDICTED: Il suo cuore era e non poteva non nulla .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: And she feared that, more than anything else in the world, and therefore hid from him everything concerning her son.
+    TARGET: E aveva paura di questo, più di qualunque altra cosa al mondo, e perciò gli nascondeva tutto quello che riguardava il figlio.
+ PREDICTED: E temeva che non nulla di più in società e perciò si sentiva completamente al figlio .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 14: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=3.185]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Though Constantine was loth to crush his grass, he drove across the meadow.
+    TARGET: Per quanto dispiacesse a Konstantin Levin di calpestare l’erba, entrò nel prato.
+ PREDICTED: Sebbene Konstantin Levin gli uomini che lo circondavano , montò sul prato .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Besides, there were fewer to feed; the sick could eat little; our breakfast-basins were better filled; when there was no time to prepare a regular dinner, which often happened, she would give us a large piece of cold pie, or a thick slice of bread and cheese, and this we carried away with us to the wood, where we each chose the spot we liked best, and dined sumptuously.
+    TARGET: Quando non c'era tempo di cucinare, cosa che accadeva spesso, ci davano un bel pezzo di pasticcio freddo, pane e formaggio, e andavamo a desinare sull'erba.
+ PREDICTED: Inoltre , non c ’ era nulla di meglio ; la mia invece si faceva piacere , perché non ci fosse mai , e quando non c ’ era tempo a mangiare , e a un pranzo , che spesso ci avrebbe fatto un pasticcio e una piccola torta di pane , di , di , di pane , di presso al luogo ove ci siamo lì per pescare per pescare , e ci di lì un fiume , e ci di seguito .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 15: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=2.457]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: The words the peasant had spoken produced in his soul the effect of an electric spark, suddenly transforming and welding into one a whole group of disjointed impotent separate ideas which had always interested him.
+    TARGET: Le parole dette dal contadino avevano prodotto nell’animo suo l’azione di una scintilla elettrica che avesse trasformato e unito in una cosa sola l’intero sciame di pensieri disordinati, impotenti, staccati, che non avevano mai cessato di accompagnarlo.
+ PREDICTED: Le parole del contadino avevano accennato che l ’ anima era prodotto nell ’ anima sua un grido di un , e un tale movimento gli veniva meno in un gruppo di pensieri tanto più che mai lo agitavano sempre .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: But all this is by-the-bye; for as to my figure, I had so few to observe me that it was of no manner of consequence, so I say no more of that.
+    TARGET: Impresi il mio nuovo viaggio . . . . . presi per terra una via più corta, per giungere all’altura ov’era salito dianzi. Camminai da prima lungo la riva dirigendomi al luogo ove la prima volta misi all’áncora la mia piroga per aggrapparmi agli scogli.
+ PREDICTED: Ma la mia parte è così poco , perchè la mia figura , perchè aveva tanto tanto tanto tanto tanto che non mi più , che a quanto a dire .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 16: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=2.379]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: The leaders of both parties were making estimates and calculating on their fingers the white and black balls they could reckon on.
+    TARGET: I capi dell’uno e dell’altro partito calcolavano sulle dita le palline bianche e le nere.
+ PREDICTED: I pattinatori , invece , si l ’ ordine di e le dita le dita coperte , le quali potessero far venir su quelle due parti .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: And in my horror I tried to wake, but I woke still in a dream and began asking myself what it could mean, and Korney says to me: "You will die in childbed, in childbed, ma'am..."
+    TARGET: E ho cominciato a chiedermi che cosa significasse tutto questo. E Kornej mi dice: “di parto, di parto morirete, di parto, padrona mia...”.
+ PREDICTED: E in terrore l ’ orrore di , ma io mi misi a chiedere il sogno e a quello che dice , ridendo , e dice , , « », la signora , la », la », la signora , la !».
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 17: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=2.281]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: AT THE END OF MAY, when the house was more or less in order, Dolly received from her husband an answer to her letter of complaint.
+    TARGET: Verso la fine di maggio, quando già tutto era più o meno in ordine, ebbe risposta dal marito alle sue lamentele sui disagi campestri.
+ PREDICTED: Alla fine dell ’ inverno si era , quando fu meno possibile , Dolly doveva per prendere una risposta al marito per dirle della sua lettera .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: According to him it was necessary to reupholster the furniture with new cretonne, to put up curtains, make the garden tidy, plant flowers and build a bridge by the lake; but he forgot many other things which were essential, and thus caused Dolly a great deal of trouble.
+    TARGET: Secondo lui era necessario rivestire tutto il mobilio di cretonne, mettere le tende, ripulire il giardino, costruire un ponticello vicino allo stagno e piantare dei fiori: ma aveva dimenticato molte altre cose indispensabili, la cui mancanza costituiva ora un tormento per Dar’ja Aleksandrovna.
+ PREDICTED: Secondo lui , per le elezioni , bisognava entrare in nuovi , al giardino , il giardino di seta color di ferro , coi fiori d ’ un ponte color pietra , ma egli era l ’ ordine di Dar ’ ja Aleksandrovna , alla quale si trovava una certa fatica , era una certa difficoltà .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 18: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.36it/s, loss=2.802]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: 'And who was inside the cart?
+    TARGET: E chi c’era mai nella carretta?
+ PREDICTED: — E chi è su di un carro ?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: The impetuous fury of the entering gust nearly lifted us from our feet.
+    TARGET: La furia impetuosa del vento ci alzò quasi dal suolo.
+ PREDICTED: La voce che mi lasciò cadere per un ' altra parte , ci lasciò .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Processing Epoch 19: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3638/3638 [13:55<00:00,  4.35it/s, loss=2.170]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: She stood above him and caressed him with a loving look.
+    TARGET: Era china su di lui e lo carezzava con uno sguardo pieno d’amore.
+ PREDICTED: Stava ritta , e lo sguardo con un ’ espressione .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    SOURCE: Dolly, however, knew that not even a milk pudding for the children's lunch comes of itself, and that therefore so complicated and splendid an organization must have needed some one's careful attention; and from the way Vronsky surveyed the table, gave a sign with his head to the butler, and asked her whether she would take fish-broth or soup, she concluded that it had all been done by, and depended on, the master's care.
+    TARGET: Dar’ja Aleksandrovna invece sapeva che da sé non si fa neanche la farinata per la colazione dei bambini e che, perciò, per un’organizzazione così complessa e perfetta, doveva essere stata impiegata la cura intensa di qualcuno. E dallo sguardo di Aleksej Kirillovic, da come egli esaminò la tavola e fece un cenno col capo al maggiordomo, da come offrì a Dar’ja Aleksandrovna la scelta tra la botvin’ja e la soupe, ella capì che tutto era stato disposto e diretto dalle cure dello stesso padrone di casa.
+ PREDICTED: Dar ’ ja Aleksandrovna , però , non guardò neanche una torta intelligente , e lo a colazione , e perciò era così vasta che una maggior attività , e questa era indispensabile . Ma per lui , dall ’ attenzione , e , dopo aver domandato al padrone , si diresse la testa verso il padrone di lei e la camicia che aveva chiesto di fare , e aveva chiesto di portare con tutto il pesce , e di mangiare .
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
