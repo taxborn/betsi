@@ -44,6 +44,8 @@ class LayerNormalization(nn.Module):
 class FeedForwardBlock(nn.Module):
     """
     Feed forward block is a simple two layer neural network with a ReLU activation function.
+    This is used to transform the output of the multi-head attention block to the input of the
+    next multi-head attention block.
     """
     def __init__(self, d_model: int, d_ff: int, dropout: float) -> None:
         super().__init__()

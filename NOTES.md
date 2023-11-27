@@ -66,7 +66,9 @@ The purpose of this mechanism is to process and transform the output from the at
 ## Self-attention
 Multi-Head attention is based upon an existing idea called self-attention, which allows the model to relate words to each other.
 The equation for self-attention is as follows:
+
 ![Attention Equation](./resources/attention-eqn.png)
+
 Where Q, K, and V are all matricies of the input sentence. These matricies come from the input and positional encoding.
 
 These matricies are called this way because the embeddings essentially act as python dictionary keys, values, and searched by with queries.
@@ -79,7 +81,9 @@ We expect the words along the diagonal to be the highest, as each word is most s
 
 ## Multi-head attention
 ![Multi-head attention equation](./resources/multihead-attention-eqn.png)
+
 A multi-headed attention block has $N$ heads. For this multi-headed attention, we take in Q, K, and V and multiply by parameter matricies. For each head, we take a slice of each embedding of each word. This allows each head to look at the full sentence, however since we take a slice of the encoding, each head pays attention to a different part of the sentence. We want this because each head can watch different part of the sentence. In English, one word could have multiple different meanings, for example **bat** could refer to an animal, an object, or a verb (to bat something away), each head could look at this word in a different context, which is why having multiple heads is so powerful.
+
 ![Multi-head attention](./resources/mha.png)
 
 # Encoder
@@ -89,6 +93,7 @@ In the encoder, we really just put together all the pieces above. The paper call
 The decoder is just about the same as the encoder, except the decoder takes inputs from the encoder (the K and V matricies mentioned from above), and we are queried by the output embedding. We also have 6 decoding layers.
 
 Additionally, we have a masked multi-head attention, the mask prevents us from 'looking into the future' by a causal mask, by setting the attention scores of all embeddings above the diagonal to zero, to prevent the model cheating.
+
 ![Masked multi-head attention](./resources/masked-mha.png)
 
 # Linear Layer
@@ -97,6 +102,8 @@ The linear layer tells for every embedding, what word it translates to. It essen
 # Transformer
 ![Transformer model](./resources/transformer-model.png)
 # Training
+> In the paper they had 8 GPUs (P100's, ~96GB vRAM) with 3.5 days of training. My resulting model has ~8 hours of training on 1 20GB vRAM GPU.
+
 In the context of translating from English to Italian, we will first take the English sentence *I love you very much* and add special characters to tell the model when to start and end:
 ```
 <SOS>I love you very much<EOS>
