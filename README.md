@@ -27,18 +27,18 @@ and AMD card, I hope to use that to get GPU training by the end of the block.
 - [X] Input Embeddings
 - [X] Positional Encoding
 - [X] Layer Normalization **- Due by 11/1**
-- [ ] Feed forward
-- [ ] Multi-Head attention
-- [ ] Residual Connection
-- [ ] Encoder
-- [ ] Decoder **- Due by 11/8**
-- [ ] Linear Layer
-- [ ] Transformer
-- [ ] Tokenizer **- Due by 11/15**
-- [ ] Dataset
-- [ ] Training loop
+- [X] Feed forward
+- [X] Multi-Head attention
+- [X] Residual Connection
+- [X] Encoder
+- [X] Decoder **- Due by 11/8**
+- [X] Linear Layer
+- [X] Transformer
+- [X] Tokenizer **- Due by 11/15**
+- [X] Dataset
+- [X] Training loop
 - [ ] Visualization of the model **- Due by 11/22**
-- [ ] Install AMD RocM to train with GPU **- Attempt to do by end**
+- [X] Install AMD RocM to train with GPU **- Attempt to do by end**
 
 ## References used
 - [Dropout information](https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/)
